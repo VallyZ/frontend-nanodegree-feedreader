@@ -50,6 +50,6 @@ Review the Feed Reader Testing [Project Rubric](https://review.udacity.com/#!/pr
 
 # How to run the application?
 
-1.Navigate over to [Github](https://github.com/VallyZ/frontend-nanodegree-feedreader).
-2.Clone or download the project.
-3.Run the index.html to view the tests in the browser.
+1. Navigate over to [Github](https://github.com/VallyZ/frontend-nanodegree-feedreader).
+2. Clone or download the project.
+3. Run the index.html to view the tests in the browser.

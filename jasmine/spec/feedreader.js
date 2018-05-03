@@ -36,8 +36,8 @@ $(function() {
       allFeeds.forEach(function(feed) {
         expect(feed.url).toBeDefined();
         expect(feed.url.length).not.toBe(0);
-      })
-    })
+      });
+    });
     /* Write a test that loops through each feed
      * in the allFeeds object and ensures it has a name defined
      * and that the name is not empty.
@@ -48,8 +48,8 @@ $(function() {
         expect(allFeeds[x].name).toBeDefined();
         expect(allFeeds[x].name.length).not.toBe(0);
       }
-    })
-  })
+    });
+  });
 
   /* Write a new test suite named "The menu" */
   describe('The menu', function() {
@@ -62,7 +62,7 @@ $(function() {
      */
     it('element is hidden by default', function() {
       expect(body.hasClass('menu-hidden')).toBe(true);
-    })
+    });
 
     /* Write a test that ensures the menu changes
      * visibility when the menu icon is clicked. This test
@@ -79,16 +79,16 @@ $(function() {
       icon.click();
       expect(body.attr('class')).toBe(presentClass);
 
-    })
-  })
+    });
+  });
 
   /* Write a new test suite named "Initial Entries" */
   describe('Initial Entries', function() {
     beforeEach(function(done) {
       loadFeed(0, function() {
         done();
-      })
-    })
+      });
+    });
     /* Write a test that ensures when the loadFeed
      * function is called and completes its work, there is at least
      * a single .entry element within the .feed container.
@@ -98,8 +98,8 @@ $(function() {
     it('ensures when the loadFeed() is called,it has at least one .entry element', function() {
       var entries = $('.feed .entry').length;
       expect(entries).toBeGreaterThan(0);
-    })
-  })
+    });
+  });
 
   /* Write a new test suite named "New Feed Selection" */
   describe('New Feed Selection', function() {
@@ -108,8 +108,8 @@ $(function() {
       feed = $('.feed').html();
       loadFeed(1, function() {
         done();
-      })
-    })
+      });
+    });
     /* Write a test that ensures when a new feed is loaded
      * by the loadFeed function that the content actually changes.
      * Remember, loadFeed() is asynchronous.
@@ -118,6 +118,6 @@ $(function() {
       var newFeed = $('.feed').html();
       expect(feed).not.toBe(newFeed);
       done();
-    })
-  })
-}())
+    });
+  });
+}());
