@@ -43,11 +43,10 @@ $(function() {
      * and that the name is not empty.
      */
     it("has a name and it's not empty", function() {
-      var x = 0;
-      for (allFeeds[x]; x < 4; x++) {
-        expect(allFeeds[x].name).toBeDefined();
-        expect(allFeeds[x].name.length).not.toBe(0);
-      }
+      allFeeds.forEach(function(feed) {
+        expect(feed.name).toBeDefined();
+        expect(feed.name.length).not.toBe(0);
+      });
     });
   });
 
@@ -70,15 +69,10 @@ $(function() {
      * clicked and does it hide when clicked again.
      */
     it('changes visibility when the menu icon is clicked', function() {
-      var presentClass = body.attr('class');
-      var newClass = (body.hasClass('menu-hidden')) ? '' : 'menu-hidden';
-
       icon.click();
-      expect(body.attr('class')).toBe(newClass);
-
+      expect(body.hasClass('menu-hidden')).toBe(false);
       icon.click();
-      expect(body.attr('class')).toBe(presentClass);
-
+      expect(body.hasClass('menu-hidden')).toBe(true);
     });
   });
 
